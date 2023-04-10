@@ -20,3 +20,9 @@ dx(x)
 
 
 ```
+
+```{r}
+# acceso a la data
+
+data = read.csv("data.csv")
+```
