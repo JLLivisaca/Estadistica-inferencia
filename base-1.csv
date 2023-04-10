@@ -1,0 +1,31 @@
+"","edad","grupo","nivel.estudios","estado.civil","anios.casado","numero.hijos","ingresos","gastos"
+"1",71,"adulto","tercer","casado",1,4,NA,107
+"2",15,"adulto mayor","segundo",NA,25,5,924,180
+"3",NA,"adulto",NA,"soltero",25,3,359,499
+"4",48,NA,"quinto","soltero",18,NA,NA,126
+"5",NA,"niño","tercer","soltero",NA,1,NA,0
+"6",14,NA,"sin nivel","casado",0,0,20,0
+"7",11,"ninio","sin nivel","casado",0,0,0,NA
+"8",NA,"niño","sin-nivel","soltero",1,0,0,50
+"9",13,"niño","cuarto","soltero",0,NA,0,NA
+"10",11,"niño","Sin Nivel","soltero",0,0,25,30
+"11",37,NA,"Sin nivel","Casado",0,0,787,NA
+"12",NA,"adulto","segundo","Divorciado",NA,5,803,NA
+"13",7,"niño","sin","casado",0,NA,100,80
+"14",11,"adolescente","tercer","divorciado",0,5,300,NA
+"15",64,NA,"segundo","soltero",NA,3,1111,229
+"16",28,"adulto",NA,"soltero",17,2,674,486
+"17",20,"adolescente",NA,NA,2,2,832,NA
+"18",45,"adulto",NA,"casado",1,0,720,222
+"19",50,"adulto","sin nivel","divorciado",17,5,383,450
+"20",38,"adulto-mayor",NA,NA,14,NA,430,382
+"21",21,"adult","sin-nivel","soltero",9,4,843,288
+"22",7,"niño","sin nivel",NA,0,0,NA,0
+"23",48,NA,"Sin Nivel","soltero",15,4,422,410
+"24",NA,"joven","Sin nivel","Soltero",4,NA,1056,100
+"25",4,"Adulto Mayor","quinto",NA,0,2,610,274
+"26",NA,"Adolescente","tercer",NA,10,NA,240,208
+"27",60,"adulto mayor",NA,"Divorciado",NA,0,NA,437
+"28",24,"adolescente","segundo","SolterO",NA,1,NA,287
+"29",40,"adulto","Sin nivel","soltero",NA,3,533,376
+"30",52,NA,"cuarto","soltero",15,2,434,109
