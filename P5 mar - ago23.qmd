@@ -4,3 +4,7 @@ author: "JCLL"
 format: docx
 editor: visual
 ---
+
+```{r}
+f = 0:100
+```
