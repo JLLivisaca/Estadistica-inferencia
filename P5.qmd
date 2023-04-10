@@ -3,3 +3,20 @@ title: "Datos"
 format: docx
 editor: visual
 ---
+
+```{r}
+#función de distribución de probabilidad
+dbinom(3,56,0.01)
+
+```
+
+```{r}
+# integrar una funcoión 
+dx = function(x){
+  x^2 *5
+}
+x= 0:100
+dx(x)
+
+
+```
