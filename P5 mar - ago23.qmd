@@ -5,6 +5,19 @@ format: docx
 editor: visual
 ---
 
+# **Distribuciones discretas**
+
+# 
+
+## Ejercicio 1 
+
 ```{r}
-f = 0:100
+# Ejericio 1 
+# Calcular la probabilidad que la quinta persona expuesta a esta enfermedad sea la segunda en contraerla.
+
+(personas = dnbinom(x= 3,size=2,prob = 0.3)) # x representa la cantidad de fracasos que se tiene en el experimento, size = representa cantidad de éxitos
+```
+
+```{r}
+
 ```
