@@ -68,3 +68,5 @@ phyper(1, m, n, k)
 
 
 ```
+
+Determinar qué tipo de distribución se aplica en el ejercicio 50 y 68
