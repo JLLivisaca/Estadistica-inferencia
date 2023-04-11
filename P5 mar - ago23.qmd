@@ -35,3 +35,36 @@ plot (x=0:6, y = dgeom(x=0:6,2/10),
       type= "h") # grafica 
 
 ```
+
+```{r}
+# Literal b
+# Distribuición negativa 
+# porque k > 1
+
+dnbinom(1,2, 0.5)
+
+# El quinto hijo sea el tecer varón 
+dnbinom(2,3, 0.5)
+# El quinto hijo sea la cuarta mujer 
+dnbinom(1,4, 0.5)
+
+(prob1 = dnbinom(2,3, 0.5) + dnbinom(1,4, 0.5))
+```
+
+```{r}
+# Distribución hypergeométrica
+dhyper(10,4, 6,3, 4/10)
+
+
+m <- 6; n <- 4; k <- 3 # m es el número de fracasos, n es el número de éxito, y k es la muestra aleatoria
+x <- 0:(k+1)
+dhyper(x, m, n, k)
+# probabilidad no más de una defectuosa
+phyper(1, m, n, k)
+# al menos una defectuosa 
+
+(g= 1 - phyper(0, m, n, k))
+
+
+
+```
