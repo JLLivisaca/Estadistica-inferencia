@@ -9,7 +9,7 @@ editor: visual
 
 # 
 
-## Ejercicio 1 
+## Ejercicio 1
 
 ```{r}
 # Ejericio 1 
@@ -19,5 +19,19 @@ editor: visual
 ```
 
 ```{r}
+# Segundo ejercicios
+# k = 1 
+# p = 2/10
+
+dgeom(5,2/10) # x es el valor que pide el R, es la cantidad de fallos antes de encontrar el primer éxito
+
+dgeom(x=0:6, 2/10)
+(sum(dgeom(x=0:6,2/10)))
+pgeom(6,2/10)
+qgeom(0.4, 2/10)
+
+# grafica de la distribución geometrica
+plot (x=0:6, y = dgeom(x=0:6,2/10),
+      type= "h") # grafica 
 
 ```

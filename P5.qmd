@@ -26,3 +26,39 @@ dx(x)
 
 data = read.csv("data.csv")
 ```
+
+```{r}
+# binomial negativa 
+library
+nbinom(2,3,4)
+dgeom(x=124, prob=0.01)
+
+```
+
+```{r}
+
+x= 0:18 
+plot(x= x, y= dbinom(x=x, 50, 0.01), 
+     type= "h", lwd=6, las=2)
+
+x= 0:18 
+plot(x= x, y= pbinom(x=x, 50, 0.01), 
+     type= "h", lwd=6, las=2)
+
+```
+
+```{r}
+
+(f1= dbinom(2, 50, 0.01))
+(f= pbinom(2,50,0.01))
+qbinom(0.5,50, prob=0.2)
+dnbinom(9,10,0.3)
+x= 1:10
+dnbinom(x=6, size=4, prob=0.3)  # X son los fracasos, size son los éxitos
+dnbinom(x=3, size=2, prob=0.3)  # X son los fracasos, size son los éxitos
+x=0:5
+dgeom(x=x,0.2)
+(c=cumsum(dgeom(x=x,0.2)))
+
+(f=pgeom(q=5,0.2))
+```
