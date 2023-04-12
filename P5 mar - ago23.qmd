@@ -70,3 +70,48 @@ phyper(1, m, n, k)
 ```
 
 #Determinar qué tipo de distribución se aplica en el ejercicio 50 y 68
+
+# Distribución Poisson
+
+```{r}
+# P (X=8)
+
+dpois(8,5)
+
+# P(X<= 8)
+ppois(8,5)
+
+x=0:8
+sum(dpois(x,5))
+
+# P(9<= X)
+# P(9<= X) = 1 - P(X < 9)
+(P9 = 1- ppois(8,5))
+
+# P(5<= X <= 8)
+dpois(x=c(5,8),5)
+
+ppois(5,5); ppois(8,5) 
+(f= ppois(8,5)-ppois(5,5))
+# P(5 < X < 8)
+x= c(6,7)
+p=ppois(x,5)
+
+p[2]-p[1]
+
+# Prueba de lamda
+ppois(4,5)
+ppois(4,3.75) 
+
+x= 0: 100
+ppois(x,3.75)
+```
+
+```{r}
+# Distribución continua, Normal Estándar
+
+dnorm(1.45,mean=0,sd=1)
+
+pnorm(1.49, mean=0,sd=1, lower.tail=T)
+
+```
