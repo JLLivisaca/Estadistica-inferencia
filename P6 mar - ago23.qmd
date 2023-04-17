@@ -1,0 +1,91 @@
+---
+title: "P6 mar - ago 23"
+format: docx
+editor: visual
+---
+
+# Distribución Normal - Estándar
+
+Sea Z una variable aleatoria normal estándar y calcule las siguientes probabilidades, trace las figuras siempre que sea apropiado.
+
+a\. P(0\<= Z \<= 2.17)
+
+b\. P(0 \<= Z \<= 1)
+
+```{r}
+#a. P(0<= Z <= 2.17)
+#b. P(0 <= Z <= 1)
+
+# Grafica de cuántiles
+library(Rcmdr)
+library(RcmdrMisc)
+library(readr)
+
+local({
+  .x <- seq(-3.291, 3.291, length.out=1000)  
+  plotDistr(.x, dnorm(.x, mean=0, sd=1), cdf=FALSE, xlab="x", 
+  ylab="Density", 
+  main=paste("Distribución Normal:  media=0, desviación estándar=1"), 
+  regions=list(c(-Inf, -0.841621233572914)), col=c('#BEBEBE', '#BEBEBE'), 
+  legend.pos='topright')
+})
+
+
+#a. P(0<= Z <= 2.17)
+
+r= pnorm(c(0,2.17), mean = 0, sd= 1, lower.tail = T)
+(r[2]-r[1])
+
+#b. P(0 <= Z <= 1)
+r1= pnorm(c(0,1), mean = 0, sd= 1, lower.tail = T)
+(r1[2]-r1[1])
+
+#j. P(Z >= -2.5)
+
+pnorm(-2.5, mean=0,sd=1, lower.tail = F)
+
+
+# El valor de la probabilidad entre P(0 <= Z <= 1), es de 0.3413447
+
+```
+
+Suponga que la fuerza que actúa en una columna que ayuda a soportar un edificio está normalmente distribuida con media de 15.0 kips y desviación estándar de 1.25 kips.
+
+¿Cuál es la probabilidad de que la fuerza
+
+a\. sea de más de 18 kips?
+
+b\. esté entre 10 y 12 kips?
+
+c\. Difiera de 15.0 kips en cuando mucho 1.5 desviaciones estándar?
+
+```{r}
+# Para encontrar el literal a, debemos transformar la variable X(fuerza que actúa sobre una columna) a una variable Z. Para realizar está transformación, debemos tipificar la variable X. Esto es, a X se resta la media y se divide para la desviación estándar
+x= 18
+sigma1=1.25
+miu= 15
+(Z = (x - miu) / sigma1)
+# La probabilidad de que de que la fuerza sea de más de 18 kips, es: 
+
+(P.mayor18 = pnorm(Z, mean=0,sd=1, lower.tail = F))
+
+# La probabilida es 0.008197536
+
+# ¿Cuál es la probabilidad de que la fuerza esté entre 10 y 12 kips? 
+x= 10
+sigma1=1.25
+miu= 15
+(Z1 = (x - miu) / sigma1)
+
+x1=12
+sigma1=1.25
+miu= 15
+(Z2 = (x1 - miu) / sigma1)
+
+t=(pnorm(c(Z1, Z2), mean= 0, sd= 1, lower.tail = T))
+(t[2]-t[1])
+ # La probabilida de que la fuerza este entre 10 y 12 kips es de 0.008165865
+
+
+
+```
