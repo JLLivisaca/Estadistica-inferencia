@@ -86,6 +86,23 @@ t=(pnorm(c(Z1, Z2), mean= 0, sd= 1, lower.tail = T))
 (t[2]-t[1])
  # La probabilida de que la fuerza este entre 10 y 12 kips es de 0.008165865
 
+# c. Difiera de 15.0 kips en cuando mucho 1.5 desviaciones estándar? 
+x= 15 + 1.5*(1.25) 
+miu= 15
+sigma1 = 1.25
+  
+(Z3 = (x - miu)/ sigma1)
 
+pnorm(Z3, mean= 0, sd=1, lower.tail = T)
+
+x2= 15 - 1.5*(1.25) 
+miu= 15
+sigma1 = 1.25
+  
+(Z4 = (x2 - miu)/ sigma1)
+
+t= pnorm(c(Z4,Z3), mean= 0, sd=1, lower.tail = T)
+
+t[2]-t[1]
 
 ```
