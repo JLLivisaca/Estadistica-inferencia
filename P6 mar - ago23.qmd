@@ -106,3 +106,17 @@ t= pnorm(c(Z4,Z3), mean= 0, sd=1, lower.tail = T)
 t[2]-t[1]
 
 ```
+
+```{r}
+# función 
+qnorm(0.91, mean= 30, sd= 5, lower.tail = T)
+
+normt = function(x){
+
+  (1 / (5 * sqrt(2*pi)))* exp (- 0.5 *((x - 30)/ 5)^2)
+}
+x= 3
+
+integrate(normt, -Inf, 36.7037751684511)
+
+```
