@@ -113,3 +113,82 @@ r=pnorm(c(-2.5,2.5),mean=0,sd=1, lower.tail=T)
 r[2]-r[1]
 
 ```
+
+```{r}
+1-pexp(6, 1/4)
+
+x= 0:10
+
+plot(pnorm(x, 1/lamda), type="l")
+exp1 = function(x, lamda){
+  0.25* exp(-x/lamda)
+}
+x=0:100
+lamda=seq(0,1,0.1)
+
+exp1(x,lamda)
+
+curve(exp1(x,lamda))
+
+integrate(exp1, 0,6)
+
+qexp(0.7768698,1/4)
+
+pexp(6,1/4)
+lamda= 1/x
+plot(pexp(x, lamda), type="l")
+
+pexp(4, 1, lower.tail = F)
+qexp(0.01831564, 1, lower.tail = F)
+p= pexp(c(5,2), 1)
+1-pexp(75000, 0.00004)
+pexp(75000, 0.00004, lower.tail = F)
+p[1]-p[2]
+
+1/25000
+
+gamma(6)
+1/0.01
+```
+
+```{r}
+library(ggplot2)
+library(dplyr)
+data(midwest)
+midwest <- midwest %>%
+  select(county, state, poptotal, popdensity, percwhite, percblack, percamerindan, percasian, percother, area) %>%
+  #filter(!is.na(poptotal), !is.na(popwhite)) %>%
+  mutate_at(vars(percwhite:percother), ~replace_na(., 0))
+ggplot(midwest, aes(x = medianage, y = Poptotal, fill = factor(ifelse(medianage < 37.5, "Male", "Female")))) +
+  geom_bar(stat = "identity", position = "identity") +
+  scale_fill_manual(values = c("#619CFF", "#FF6161")) +
+  labs(title = "Population Pyramid", x = "Median Age", y = "Population", fill = "") +
+  coord_flip()
+```
+
+```{r}
+acum = function(x) {
+ f=function(y) { (3*y^(-4))
+}
+resultado <- integrate(f, lower = 1, upper = x)$value
+#eturn(resultado)
+}
+1-acum(2)
+```
+
+```{r}
+#A
+#declaro la funcion
+fx=function(X){
+1/X^4
+}
+m=integrate(fx,1,Inf)
+k=1/m$value
+k
+
+```
+
+```{r}
+fx=function(x){(1/x^4)}
+fx1=integrate(fx,1,Inf)
+```

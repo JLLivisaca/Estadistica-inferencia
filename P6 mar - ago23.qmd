@@ -115,8 +115,12 @@ normt = function(x){
 
   (1 / (5 * sqrt(2*pi)))* exp (- 0.5 *((x - 30)/ 5)^2)
 }
-x= 3
+
 
 integrate(normt, -Inf, 36.7037751684511)
+
+# Ejercicio
+x= 1:10
+qnorm(0.95, mean= x, sd= 0.06, lower.tail = T)
 
 ```
