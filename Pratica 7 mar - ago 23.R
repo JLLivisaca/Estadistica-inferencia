@@ -86,11 +86,14 @@ q = 0.5
 
 # Ejercicio 71
 
-# Literal a
+# Literal a # granito
 roca.basaltica = 10 
 roca.granito = 10
 n = 15
 
-X = 0:15
-phyper(X, 10,10,15)
+# Distribución hypergeométrica
+m <- 10; n <- 10; k <- 15 # m es el número de fracasos, n es el número de éxito, y k es la muestra aleatoria
+x <- 0:(k)
+dhyper(x, m, n, k)
+
 
