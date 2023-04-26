@@ -126,7 +126,7 @@ x <- 0:(k)
 
 
 # Ejercicio 110 
-# P(al menos una langosta) = 1 - P(ninguna langosta)
+# P(por lo menos una langosta) = 1 - P(ninguna langosta)
 # X = número de langostas
 # P(X>= 1) = 1- P(X<1)
 # fdp de poisson = e^ - lamb  * lamb ^x / factorial(x)
@@ -137,4 +137,10 @@ x <- 0:(k)
 # radio R de una región de muestreo circular para que la probabilidad de 
 # hallar por lo menos una en la región sea igual a 0.99?
 alfa = 2
+radio = 0:10
+(Area = pi * radio^2)
+(lamda = alfa * Area) # son los valores de lamda a diferentes valores del radio
 
+
+
+     
