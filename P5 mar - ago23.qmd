@@ -54,7 +54,7 @@ dnbinom(1,4, 0.5)
 ```{r}
 # Distribución hypergeométrica
 
-m <- 4; n <- 5; k <- 3 # m es el número de éxitos, n es el número de fracasos, y k es la muestra aleatoria tomada
+m <- 4; n <- 5; k <- 3 # m es el número de éxitos, n es el número de fracasos , y k es la muestra aleatoria tomada
 x <- 0:(k)
 dhyper(x, m, n, k)
 # probabilidad no más de una defectuosa

@@ -46,7 +46,7 @@ p = 0.3
 # Literal b 
 (valor = Valor.medio +2*desv.esta)
 (valor = Valor.medio -2* desv.esta)
-# P(3 <= X <= 12) # al menor lo subimos al inmediato superior, al mayor bajamos al imediato superior
+# P(3 <= X <= 12) # valores cercanos
 (Prob.2desv = pbinom(c(3,12), 25, 0.3))
 (Prob.2desv[2]- Prob.2desv[1])  
 
@@ -92,8 +92,49 @@ roca.granito = 10
 n = 15
 
 # Distribución hypergeométrica
-m <- 10; n <- 10; k <- 15 # m es el número de fracasos, n es el número de éxito, y k es la muestra aleatoria
+m <- 10; n <- 10; k <- 15 # m es el número de éxitos, n es el número de fracasos, y k es la muestra aleatoria
 x <- 0:(k)
-dhyper(x, m, n, k)
+dhyper(x, m, n, k) # función de distribución 
 
+# Literal b algunos sea, como los dos tienen 10 como muestra, da lo mismo 
+
+# Todos los especímenes es P (X<=10) 
+x=0:10
+(P15 = cumsum(dhyper(x, m, n, k))) # es 0.9837
+
+# Valor medio 
+# Ex = k * m/ n+m
+(Ex = k*(m/(n+m)))
+
+#Varianza 
+# Var(x) = Ex * (1- m/(n+m))*(m+ n- k)/(m+n - 1)
+(Var.X = Ex * (1- m/(n+m))*((m+ n- k)/(m+n - 1)))
+desv.estan = sqrt(Var.X)
+(Prob.1desv = Ex + desv.estan)
+(Prob1desv = Ex - desv.estan)
+ # P ( 7 <= X <= 9)
+m <- 10; n <- 10; k <- 15 # m es el número de éxitos, n es el número de fracasos (resto del total), y k es la muestra aleatoria
+x <- 0:(k)
+
+(h= dhyper(x= 7:9, m, n, k))
+h[1]-h[3] # Probabilidad de los valores
+
+m <- 5; n <- 20; k <- 10 # m es el número de éxitos, n es el número de fracasos , y k es la muestra aleatoria
+x <- 0:(k)
+
+(h= sum(dhyper(x= 0:2, m, n, k)))
+
+
+# Ejercicio 110 
+# P(al menos una langosta) = 1 - P(ninguna langosta)
+# X = número de langostas
+# P(X>= 1) = 1- P(X<1)
+# fdp de poisson = e^ - lamb  * lamb ^x / factorial(x)
+# lambda = alfa *t 
+# t es una variable que cambia con el tiempo, si lo colocamos con área sería
+# lambda = alfa * unidad de área
+# Area = pi * radio ^2, usamos Radio por la pregunta: ¿Qué tan grande deberá ser el
+# radio R de una región de muestreo circular para que la probabilidad de 
+# hallar por lo menos una en la región sea igual a 0.99?
+alfa = 2
 
