@@ -49,7 +49,7 @@ p = 0.3
 # P(3 <= X <= 12) # valores cercanos
 (Prob.2desv = pbinom(c(3,12), 25, 0.3))
 (Prob.2desv[2]- Prob.2desv[1])  
-
+dbinom(2,25,0.3)# Probabilidad de exactamente dos personas compren un libro nuevo
 # Literal c
 x= 0:25
 # Distribución para los libros nuevo, p cambia ya que cambia la muetra ahora es 
@@ -81,7 +81,7 @@ Y= (25-X)
 n= 25 
 p = 0.5
 q = 0.5
-(E.hx = 100 * n*p + 70 *q)
+(E.hx = 100 * n*p + 70 *n*q)
 
 
 # Ejercicio 71
@@ -112,11 +112,11 @@ x=0:10
 desv.estan = sqrt(Var.X)
 (Prob.1desv = Ex + desv.estan)
 (Prob1desv = Ex - desv.estan)
- # P ( 7 <= X <= 9)
+ # P ( 6 <= X <= 9)
 m <- 10; n <- 10; k <- 15 # m es el número de éxitos, n es el número de fracasos (resto del total), y k es la muestra aleatoria
 x <- 0:(k)
 
-(h= dhyper(x= 7:9, m, n, k))
+(h= dhyper(x= 6:9, m, n, k))
 h[1]-h[3] # Probabilidad de los valores
 
 m <- 5; n <- 20; k <- 10 # m es el número de éxitos, n es el número de fracasos , y k es la muestra aleatoria
