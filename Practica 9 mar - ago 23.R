@@ -16,3 +16,7 @@ qnorm(0.033, mean = 0, sd = 1, lower.tail = F) # Es el valor de Zalfa
  # c) mayor a 178.1 
 
 # Demuestre
+
+#Valor de T con 15 grados de libertad y un alfa de 0.05
+qt (0.05, df= 15, lower.tail = F)
+
