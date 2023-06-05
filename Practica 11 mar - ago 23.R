@@ -41,3 +41,10 @@ Zalfamedios=abs(qnorm(0.05, 0,1,lower.tail = T))
 # Decidir 
 # Ha nos da la región de rechazo 
 # Ho nos sirve para decidir
+
+# Zalfa medios es debido a la región de rechazo de la Ha
+(Zalfamedios= qnorm(0.025,0,1, lower.tail = T))
+# P valor 
+(pvalor = pnorm(Zp, 0,1,lower.tail = T))
+
+
