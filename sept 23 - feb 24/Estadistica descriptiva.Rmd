@@ -1,0 +1,29 @@
+---
+title: "REPORTE E-DESCRIPTIVA"
+author: "Juan Llivisaca"
+date: "2023-09-26"
+output: word_document
+---
+
+# BASE DE DATOS DE PRUEBA
+
+```{r}
+# Cargar los datos
+library(readr)
+base <- read_delim("C:/Users/Juan Llivisaca/Downloads/base.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+# Estadística descriptiva
+summary(base$edad)
+library(descriptr)
+ds_auto_summary_stats(base,edad)
+# descriptr::ds_summary_stats(base,edad)
+
+# Imputación de datos
+
+base$edad1 <- ifelse(is.na(base$edad)== T, mean(base$edad), base$edad)
+ds_auto_summary_stats(base,edad1)
+
+base[c(2:5),1]
+```
+ En esta base de datoe existen por ejemplo 10 Na, la media es de 31.6 y la mpda es de 48. 
+ 
