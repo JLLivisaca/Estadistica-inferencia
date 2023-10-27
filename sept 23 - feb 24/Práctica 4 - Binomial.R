@@ -107,14 +107,31 @@ phyper(0, m, n, k)
   #leccionadas para guardarlas detrás del mostrador. 
 # a. ¿Qué distribución tiene X (nombre y valores de todos los
                               # parámetros)? 
-  # b.Calcule P(X  2), P(X  2) y P(X  2). 
-m <- 4; n <- 5; k <- 3 # m es el número de éxitos, n es el número de fracasos , y k es la muestra aleatoria tomada
-x <- 0:(4) # es el valor de la probabilidad que me piden dentro del problema
+  # b.Calcule P(X= 2), P(X <= 2) y P(X  >= 2). 
+m <- 6; n <- 9; k <- 5 # m es el número de éxitos, n es el número de fracasos , y k es la muestra aleatoria tomada
+x <- 0:(6) # es el valor de la probabilidad que me piden dentro del problema
 dhyper(x, m, n, k) 
 # probabilidad no más de una defectuosa
-phyper(0, m, n, k)
+phyper(2, m, n, k, lower.tail = T)
 
 
 # c. Calcule el valor medio y la desviación estándar de X. 
+
+
+# Ejercicio 82 pp: 125 
+#Considere escribir en un disco de computadora y luego enviar-
+ # lo a través de un certificador que cuenta el número de pulsos
+#faltantes. Suponga que este número X tiene una distribución
+#de Poisson con parámetro   0.2. (Sugerido en “Average
+ #                                  Sample Number for Semi-Curtailed Sampling Using the Pois-
+  #                                   son Distribution”, J. Quality Technology, 1983: 126–129.)
+#a. ¿Cuál es la probabilidad de que un disco tenga exacta-
+ # mente un pulso faltante? 
+dpois(1,0.2)
+
+  #b. ¿Cuál es la probabilidad de que un disco tenga por lo me-
+  #nos dos pulsos faltantes? 
+  #c. Si seleccionan dos discos independientemente, ¿cuál es la
+#probabilidad de que ninguno contenga un pulso faltante?
 
 
