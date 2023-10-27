@@ -79,3 +79,42 @@ pbinom(7,10,0.5)
 # 10 fallas antes del quinto éxito?
 
 dnbinom(x=10, size=5, prob=0.2)
+
+# Distribución de Poisson
+
+dpois(1,5) # esto representa el f(x)
+ppois(2,5) # esto representa el F(x)
+
+
+m <- 4; n <- 5; k <- 3 # m es el número de éxitos, n es el número de fracasos , y k es la muestra aleatoria tomada
+x <- 0:(4) # es el valor de la probabilidad que me piden dentro del problema
+dhyper(x, m, n, k) 
+# probabilidad no más de una defectuosa
+phyper(0, m, n, k)
+# al menos una defectuosa 
+
+(g= 1 - phyper(0, m, n, k))
+
+# Ejercicio hipergeométrica
+
+#Un tipo de cámara digital viene en una versión de 3 megapi-
+  #xeles o una versión de 4 megapixeles. Una tienda de cáma-
+  #ras recibió un envío de 15 de estas cámaras, de las cuales 6
+#tienen una resolución de 3 megapixeles. Suponga que se 
+#seleccionan al azar 5 de estas cámaras para guardarlas detrás
+#del mostrador; las otras 10 se colocan en una bodega. Sea 
+#X  el número de cámaras de 3 megapixeles entre las 5 se-
+  #leccionadas para guardarlas detrás del mostrador. 
+# a. ¿Qué distribución tiene X (nombre y valores de todos los
+                              # parámetros)? 
+  # b.Calcule P(X  2), P(X  2) y P(X  2). 
+m <- 4; n <- 5; k <- 3 # m es el número de éxitos, n es el número de fracasos , y k es la muestra aleatoria tomada
+x <- 0:(4) # es el valor de la probabilidad que me piden dentro del problema
+dhyper(x, m, n, k) 
+# probabilidad no más de una defectuosa
+phyper(0, m, n, k)
+
+
+# c. Calcule el valor medio y la desviación estándar de X. 
+
+
