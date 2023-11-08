@@ -131,7 +131,9 @@ dpois(1,0.2)
 
   #b. ¿Cuál es la probabilidad de que un disco tenga por lo me-
   #nos dos pulsos faltantes? 
+1- ppois(1,0.2)
+
   #c. Si seleccionan dos discos independientemente, ¿cuál es la
 #probabilidad de que ninguno contenga un pulso faltante?
 
-
+ppois(0,0.2)
