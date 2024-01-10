@@ -74,4 +74,18 @@ qt(0.05, df=n.silverr.experi + n.silverr.natural -2 , lower.tail = F)
 # Se concluye que por lo tanto hay evidencia estadística para decir que el tiempo de alimentación en el lugar experimental de la 
 # especie mirlos es mayor que tiempo de alimentación en el lugar natural. 
 
+# Comprobación de las varianzas
+
+# Ho: var 1 - var 2 = 0 0
+# Ha: var 1 - var 2 dif 0 
+
+F.var <- 1 # se asume que las varianzas muestrales y las poblacionales son iguales
+# Mirlos 
+(qf(c(0.025), df1=20, df2=8, lower.tail=TRUE))
+(qf(c(0.025), df1=20, df2=8, lower.tail=FALSE))
+# Silverreyes
+(qf(c(0.025), df1=14, df2=16, lower.tail=TRUE))
+(qf(c(0.025), df1=14, df2=16, lower.tail=FALSE))
+# Como se puede ver el valor de F.var está dentro de la zona de no rechazo tanto para la especie
+# mirlos como silverreyes, por lo tanto asumir varianzas iguales es adecuado.
 
