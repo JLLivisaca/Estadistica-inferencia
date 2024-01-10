@@ -67,8 +67,8 @@ qt(0.05, df=n.mirlos.experi + n.mirlos.natural -2 , lower.tail = F)
 
 (sp <-  sqrt((((n.silverr.experi-1)*(sd.silverr.experi^2))+((n.silverr.natural-1)*(sd.silverr.natural^2)))/
                (n.silverr.experi + n.silverr.natural -2)))
-(sxx <- sp * sqrt((1/n.silverr.experi)+ (1/n.silverr.natural)))
-(T.silverr <- ((media.silverr.experi - media.silverr.natural) - 0 )/ (sxx))
+(sxx1 <- sp * sqrt((1/n.silverr.experi)+ (1/n.silverr.natural)))
+(T.silverr <- ((media.silverr.experi - media.silverr.natural) - 0 )/ (sxx1))
 qt(0.05, df=n.silverr.experi + n.silverr.natural -2 , lower.tail = F)
 # Se compara Tc= 17.10666 y el Talfa = 1.697261, es mayor por lo tanto se rechaza la Ho. 
 # Se concluye que por lo tanto hay evidencia estadística para decir que el tiempo de alimentación en el lugar experimental de la 
@@ -88,4 +88,44 @@ F.var <- 1 # se asume que las varianzas muestrales y las poblacionales son igual
 (qf(c(0.025), df1=14, df2=16, lower.tail=FALSE))
 # Como se puede ver el valor de F.var está dentro de la zona de no rechazo tanto para la especie
 # mirlos como silverreyes, por lo tanto asumir varianzas iguales es adecuado.
+
+
+# literal b
+
+n.mirlos.antes <-  9
+media.mirlos.antes <- 123
+sd.mirlos.antes <-  1.03
+n.mirlos.despues <-  9
+media.mirlos.despues <- 170
+sd.mirlos.despues <-  2.3
+
+n.silverr.antes <-  15
+media.silverr.antes <- 155
+sd.silverr.antes <-  2.1
+n.silverr.despues <-  15
+media.silverr.despues <- 169
+sd.silverr.despues <-  0.8
+
+# La muestra es pareada
+# Mirlos
+# Ho: miu tiempo exper - miu tiempo natural = 0
+# Ha: miu tiempo exper - miu tiempo natural dif 0
+(d <-  media.mirlos.antes - media.mirlos.despues)
+
+(t.pareado <-  (d - 0)/ (sxx / sqrt(9)))
+qt(0.025, df= 8, lower.tail = T)
+#t = -30.92357, t0.025, 8 = -2.306004 Se rechaza la Ho, 
+# Por lo tanto se decide que si existe una diferencia en el peso antes y después.
+
+# Silverreyes
+# Ho: miu tiempo exper - miu tiempo natural = 0
+# Ha: miu tiempo exper - miu tiempo natural dif 0
+(d <-  media.silverr.antes - media.silverr.despues)
+
+(t.pareado <-  (d - 0)/ (sxx1 / sqrt(15)))
+qt(0.025, df= 14, lower.tail = T)
+#t = -30.92357, t0.025, 14 = -2.144787 Se rechaza la Ho, 
+# Por lo tanto se decide que si existe una diferencia en el peso antes y después.
+
+
 
