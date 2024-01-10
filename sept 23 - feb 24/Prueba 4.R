@@ -51,6 +51,27 @@ sd.silverr.natural <-  4
 # Ho: miu tiempo exper - miu tiempo natural = 0
 # Ha: miu tiempo exper - miu tiempo natural > 0
 
-T.mirlos <- 
+(sp <-  sqrt((((n.mirlos.experi-1)*(sd.mirlos.experi^2))+((n.mirlos.natural-1)*(sd.mirlos.natural^2)))/
+  (n.mirlos.experi + n.mirlos.natural -2)))
+(sxx <- sp * sqrt((1/n.mirlos.experi)+ (1/n.mirlos.natural)))
+(T.mirlos <- ((media.mirlos.experi - media.mirlos.natural) - 0 )/ (sxx))
+qt(0.05, df=n.mirlos.experi + n.mirlos.natural -2 , lower.tail = F)
+# Se compara Tc= 4.746947 y el Talfa = 1.701131, es mayor por lo tanto se rechaza la Ho. 
+# Se concluye que por lo tanto hay evidencia estadística para decir que el tiempo de alimentación en el lugar experimental de la 
+# especie mirlos es mayor que tiempo de alimentación en el lugar natural. 
+
+
+# Silverreyes
+# Ho: miu tiempo exper - miu tiempo natural = 0
+# Ha: miu tiempo exper - miu tiempo natural > 0
+
+(sp <-  sqrt((((n.silverr.experi-1)*(sd.silverr.experi^2))+((n.silverr.natural-1)*(sd.silverr.natural^2)))/
+               (n.silverr.experi + n.silverr.natural -2)))
+(sxx <- sp * sqrt((1/n.silverr.experi)+ (1/n.silverr.natural)))
+(T.silverr <- ((media.silverr.experi - media.silverr.natural) - 0 )/ (sxx))
+qt(0.05, df=n.silverr.experi + n.silverr.natural -2 , lower.tail = F)
+# Se compara Tc= 17.10666 y el Talfa = 1.697261, es mayor por lo tanto se rechaza la Ho. 
+# Se concluye que por lo tanto hay evidencia estadística para decir que el tiempo de alimentación en el lugar experimental de la 
+# especie mirlos es mayor que tiempo de alimentación en el lugar natural. 
 
 
