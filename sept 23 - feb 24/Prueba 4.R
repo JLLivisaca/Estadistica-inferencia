@@ -20,7 +20,7 @@
 # Ha: miu pesos > 25
 pesos = c(21, 23, 27, 19, 17, 18, 20, 15, 17,22)
 t.test(pesos, mu= 25, alternative = "greater") # se prueba que los pesos sean mayores a 25 gramos
-qt(0.05, df= length(pesos)-1, lower.tail = F) # el valor de T alfa
+qt(0.05, df= length(pesos)-1, lower.tail = F) # el valor de T alfa 1.833113
 # t = -4.5944, df = 9, p-value = 0.9993, Por lo tanto No se Rechaza Ho
 # Por lo tanto, no se tiene evidencia para decir que los pesos de los ratones sean mayores a 25 gramos
 
