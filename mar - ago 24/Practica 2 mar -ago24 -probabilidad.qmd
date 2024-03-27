@@ -1,0 +1,136 @@
+---
+title: "P2"
+author: "mar - ago 24"
+format: docx
+editor: visual
+---
+
+## Práctica 2
+
+Objetivo: Simular la probabilidad de ventos mutuamente excluyentes, eventos cualesquiera, indpendientes y dependientes.
+
+### Eventos mutuamente excluyentes
+
+**Experimento:** Lanzar una moneda y lanzar un dado.
+
+**Evento:** al lanzar una 1000 moneda salga cara o sello
+
+```{r}
+# Probabilidad de que al lanzar 1000 veces una moneda salga cara 
+lanzamiento.moneda <- sample(c("cara", "sello"),1000,replace = T)
+(numera.caras <-  sum(lanzamiento.moneda == "cara"))
+(numero.sellos <-  sum(lanzamiento.moneda =="sello"))
+table(lanzamiento.moneda) 
+(prob.cara <-  numera.caras/ length(lanzamiento.moneda))
+(prob.sello <-  numero.sellos/ length(lanzamiento.moneda))
+```
+
+La prob de que al lanzar una moneda 1000 veces salga sello es de 0.504.
+
+La prob de que al lanzar una moneda 1000 veces salga sello es de 0.504.
+
+**Experimento:** al lanzar una moneda y al lanzar un dado
+
+*Evento A* = al lanzar una moneda 1000 salga cara.
+
+*Evento B* = y al lanzar un dado 1000 salga 3.
+
+```{r}
+
+lanzamiento.moneda <- sample(c("cara", "sello"),1000,replace = T)
+lanzamiento.dado <-  sample(1:6,1000,replace = T)
+(numero.caras <-  sum(lanzamiento.moneda == "cara"))
+(numero.veces.que.repite.3 <-  sum(lanzamiento.dado == 3))
+# Probabilidad de eventos mutuamente excluyentes
+(proba.eventoA.y.eventoB <-  (numero.caras/length(lanzamientos_moneda)) +
+  numero.veces.que.repite.3 / length(lanzamiento.dado))
+  
+```
+
+### Eventos cualesquiera
+
+**Experimento:** al lanzar una moneda y lanzar un dado
+
+*Evento A* = al lanzar una moneda 1000 salga cara.
+
+*Evento B* = y al lanzar un dado 1000 salga 3.
+
+P(AUB) = ?
+
+```{r}
+lanzamiento.moneda <- sample(c("cara", "sello"),1000,replace = T)
+lanzamiento.dado <-  sample(1:6,1000,replace = T)
+(numero.caras <-  sum(lanzamiento.moneda == "cara"))
+(numero.veces.que.repite.3 <-  sum(lanzamiento.dado == 3))
+# Probabilidad de eventos cualesquiera
+(proba.eventoA.y.eventoB <-  (numero.caras/length(lanzamientos_moneda)) +
+  (numero.veces.que.repite.3 / length(lanzamiento.dado)) - (sum(lanzamiento.moneda== "cara" & lanzamiento.dado == 3))/length(lanzamiento.dado))
+
+```
+
+**Experimento:** al lanzar una moneda y lanzar un dado
+
+*Evento A* = al lanzar una moneda 1000 salga cara.
+
+*Evento B* = y al lanzar un dado 1000 no salga 3.
+
+P(AUB) = ?
+
+```{r}
+lanzamiento.moneda <- sample(c("cara", "sello"),1000,replace = T)
+lanzamiento.dado <-  sample(1:6,1000,replace = T)
+(numero.caras <-  sum(lanzamiento.moneda == "cara"))
+(numero.veces.que.repite.mayor.3 <-  sum(lanzamiento.dado >= 3))
+# Probabilidad de eventos cualesquiera
+(proba.eventoA.o.eventoB <-  (numero.caras/length(lanzamientos_moneda)) +
+  (numero.veces.que.repite.mayor.3 / length(lanzamiento.dado)) - (sum(lanzamiento.moneda== "cara" & lanzamiento.dado >= 3))/length(lanzamiento.dado)) 
+```
+
+**Experimento:** al lanzar una moneda y lanzar un dado
+
+*Evento A* = al lanzar una moneda 1000 salga cara.
+
+*Evento B* = y al lanzar un dado 1000 por lo menos salga un 3.
+
+P(AUB) = ?
+
+### Eventos independientes
+
+**Experimento:** al lanzar una moneda y lanzar un dado
+
+*Evento A* = al lanzar una moneda 1000 salga cara.
+
+*Evento B* = y al lanzar un dado 1000 por lo menos salga un 3.
+
+P(A y B) = ?
+
+```{r}
+lanzamiento.moneda <- sample(c("cara", "sello"),1000,replace = T)
+lanzamiento.dado <-  sample(1:6,1000,replace = T)
+(numero.caras <-  sum(lanzamiento.moneda == "cara"))
+(numero.veces.que.repite.mayor.3 <-  sum(lanzamiento.dado >= 3))
+# Probabilidad de eventos independientes
+(proba.eventoA.y.eventoB <-  (numero.caras/length(lanzamientos_moneda)) *
+  (numero.veces.que.repite.mayor.3 / length(lanzamiento.dado)))  
+```
+
+### Eventos dependientes
+
+**Experimento:** al lanzar una moneda y lanzar un dado
+
+*Evento A* = al lanzar una moneda 1000 salga cara.
+
+*Evento B* = y al lanzar un dado 1000 salga un 3.
+
+P(A y B) = ?
+
+```{r}
+lanzamiento.moneda <- sample(c("cara", "sello"),1000,replace = T)
+lanzamiento.dado <-  sample(1:6,1000,replace = T)
+(numero.caras <-  sum(lanzamiento.moneda == "cara"))
+(numero.veces.que.repite.3 <-  sum(lanzamiento.dado == 3))
+# Probabilidad de eventos condicionales
+
+
+(proba.eventoA.dado.eventoB <- (sum(lanzamiento.moneda== "cara" & lanzamiento.dado == 3)/1000) / (numero.veces.que.repite.3/ 1000))
+```
