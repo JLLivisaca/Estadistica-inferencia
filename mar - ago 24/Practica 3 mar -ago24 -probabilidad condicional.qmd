@@ -35,15 +35,15 @@ Una cadena de tiendas de video vende tres marcas diferentes de reproductores de 
 
 2.  ¿Cuál es la probabilidad de que un comprador seleccionado al azar haya comprado un reproductor de DVD que necesitará reparación mientras se encuentra dentro de garantía.
 
-    1.  P(C) = probabilidad de que un comprador adquiera un DVD y que necesitará reparación mientras se encuentra dentro de garantía
+    -   P(C) = probabilidad de que un comprador adquiera un DVD y que necesitará reparación mientras se encuentra dentro de garantía
 
-    2.  P(A1) = probabilidad de que un comprador adquiera un DVD de la marca 1 y que necesitará reparación mientras se encuentra dentro de garantía
+    -   P(A1) = probabilidad de que un comprador adquiera un DVD de la marca 1 y que necesitará reparación mientras se encuentra dentro de garantía
 
-    3.  P(A2) = probabilidad de que un comprador adquiera un DVD de la marca 2 y que necesitará reparación mientras se encuentra dentro de garantía
+    -   P(A2) = probabilidad de que un comprador adquiera un DVD de la marca 2 y que necesitará reparación mientras se encuentra dentro de garantía
 
-    4.  P(A3) = probabilidad de que un comprador adquiera un DVD de la marca 3 y que necesitará reparación mientras se encuentra dentro de garantía
+    -   P(A3) = probabilidad de que un comprador adquiera un DVD de la marca 3 y que necesitará reparación mientras se encuentra dentro de garantía
 
-    5.  P(C) = P(A1 U A2 U A3) = P(A1) + P(A2) + P(A3)
+    -   P(C) = P(A1 U A2 U A3) = P(A1) + P(A2) + P(A3)
 
 ```{r}
 (P.C <- (0.5*.25) + (0.3*0.2) + (0.2*0.1))
