@@ -1,0 +1,27 @@
+---
+title: "P3"
+author: "JCLL"
+format: docx
+editor: visual
+---
+
+## Práctica 3
+
+Objetivo: Determinar la probabildiad condicional e independiente de diferentes eventos.
+
+## Probabildiad condicional
+
+En una planta se ensamblan componentes complejos en dos líneas de ensamble diferentes, A y A. La línea A utiliza equipo más viejo que A, por lo que es un poco más lenta y me- nos confiable. Suponga que en un día dado la línea A ensambla 8 componentes, de los cua- les 2 han sido identificados como defectuosos (B) y 6 como no defectuosos (B), mientras que A ha producido 1 componente defectuoso y 9 no defectuosos. Esta información se re- sume en la tabla adjunta.
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
