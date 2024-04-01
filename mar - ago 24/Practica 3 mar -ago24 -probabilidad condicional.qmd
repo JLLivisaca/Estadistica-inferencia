@@ -11,7 +11,9 @@ Objetivo: Determinar la probabildiad condicional e independiente de diferentes e
 
 ## Probabildiad condicional
 
-En una planta se ensamblan componentes complejos en dos líneas de ensamble diferentes, A y A. La línea A utiliza equipo más viejo que A, por lo que es un poco más lenta y me- nos confiable. Suponga que en un día dado la línea A ensambla 8 componentes, de los cua- les 2 han sido identificados como defectuosos (B) y 6 como no defectuosos (B), mientras que A ha producido 1 componente defectuoso y 9 no defectuosos. Esta información se re- sume en la tabla adjunta.
+En una planta se ensamblan componentes complejos en dos líneas de ensamble diferentes, A y A'. La línea A utiliza equipo más viejo que A', por lo que es un poco más lenta y menos confiable. Suponga que en un día dado la línea A ensambla 8 componentes, de los cuales 2 han sido identificados como defectuosos (B) y 6 como no defectuosos (B'), mientras que A' ha producido 1 componente defectuoso y 9 no defectuosos. Esta información se resume en la tabla adjunta.
+
+![](images/clipboard-3717201936.png){width="152"}
 
 ```{r}
 1 + 1
