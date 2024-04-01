@@ -11,19 +11,20 @@ Objetivo: Determinar la probabildiad condicional e independiente de diferentes e
 
 ## Probabildiad condicional
 
+### Ejemplo 1
+
 En una planta se ensamblan componentes complejos en dos líneas de ensamble diferentes, A y A'. La línea A utiliza equipo más viejo que A', por lo que es un poco más lenta y menos confiable. Suponga que en un día dado la línea A ensambla 8 componentes, de los cuales 2 han sido identificados como defectuosos (B) y 6 como no defectuosos (B'), mientras que A' ha producido 1 componente defectuoso y 9 no defectuosos. Esta información se resume en la tabla adjunta.
 
 ![](images/clipboard-3717201936.png){width="152"}
 
-```{r}
-1 + 1
-```
+A = que el componente sea de la línea de ensmable A'
 
-You can add options to executable code like this
+B= que el componente sea No defectuoso
 
 ```{r}
-#| echo: false
-2 * 2
+(Prob.condicional.A.dado.B = 9/15 )
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+### Ejemplo 2
+
+Una cadena de tiendas de video vende tres marcas diferentes de reproductores de DVD. De sus ventas de reproductores de DVD, 50% son de la marca 1 (la menos cara), 30% son de la marca 2 y 20% son de la marca 3. Cada fabricante ofrece 1 año de garantía en las partes y mano de obra. Se sabe que 25% de los reproductores de DVD de la marca 1 requieren tra- bajo de reparación dentro del periodo de garantía, mientras que los porcentajes correspon- dientes de las marcas 2 y 3 son 20% y 10%, respectivamente.
