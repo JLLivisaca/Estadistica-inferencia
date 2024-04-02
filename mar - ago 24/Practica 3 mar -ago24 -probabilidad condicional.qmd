@@ -73,6 +73,12 @@ Suponga que se selecciona un individuo al azar de la población y que los evento
 
 2.  Calcule tanto P(A \| C) y P(C \| A) y explique en contex- to lo que cada una de estas probabilidades representa.
 
+    ```{r}
+    (Probabilidad.A.dado.C <- Probabilidad.A.y.C / Probabilidad.C)
+    (Probabilidad.C.dado.A <-  Probabilidad.A.y.C / Probabilidad.A) 
+
+    ```
+
 3.  Si el individuo seleccionado no tiene sangre de tipo B, ¿cuál es la probabilidad de que él o ella pertenezca al grupo étnico 1?
 
 4.  
