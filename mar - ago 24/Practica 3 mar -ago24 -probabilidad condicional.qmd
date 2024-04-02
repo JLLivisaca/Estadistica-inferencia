@@ -3,6 +3,7 @@ title: "P3"
 author: "JCLL"
 format: docx
 editor: visual
+---.4*.87
 ---
 
 ## Práctica 3
@@ -49,3 +50,9 @@ Una cadena de tiendas de video vende tres marcas diferentes de reproductores de 
 (P.C <- (0.5*.25) + (0.3*0.2) + (0.2*0.1))
 
 ```
+
+## Dependencia
+
+### Ejemplo 3
+
+La población de un país particular se compone de tres gru- pos étnicos. Cada individuo pertenece a uno de los cuatro grupos sanguíneos principales. La tabla de probabilidad conjunta anexa da la proporción de individuos en las diver- sas combinaciones de grupo étnico-grupo sanguíneo.
