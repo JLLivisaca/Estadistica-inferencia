@@ -81,4 +81,19 @@ Suponga que se selecciona un individuo al azar de la población y que los evento
 
 3.  Si el individuo seleccionado no tiene sangre de tipo B, ¿cuál es la probabilidad de que él o ella pertenezca al grupo étnico 1?
 
-4.  
+    ```{r}
+    (Probabilidad.1.y.Bcomplemento <- 0.082+0.106+0.004)
+    (Probabilidad.1.dado.Bcomplemento <- Probabilidad.1.y.Bcomplemento/ (1-0.091))
+    ```
+
+## Independencia 
+
+### Problema 4
+
+Suponga que las proporciones de fenotipos sanguíneos en una población son las siguientes:
+
+![](images/clipboard-1561793154.png){width="194"}
+
+Suponiendo que los fenotipos de dos individuos seleccionados al azar son independientes uno de otro,
+
+¿cuál es la probabilidad de que ambos fenotipos sean O?
