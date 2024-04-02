@@ -55,13 +55,21 @@ Una cadena de tiendas de video vende tres marcas diferentes de reproductores de 
 
 ### Ejemplo 3
 
-La población de un país particular se compone de tres gru- pos étnicos. Cada individuo pertenece a uno de los cuatro grupos sanguíneos principales. La tabla de probabilidad conjunta anexa da la proporción de individuos en las diver- sas combinaciones de grupo étnico-grupo sanguíneo.
+La población de un país particular se compone de tres grupos étnicos. Cada individuo pertenece a uno de los cuatro grupos sanguíneos principales. La tabla de probabilidad conjunta anexa da la proporción de individuos en las diversas combinaciones de grupo étnico-grupo sanguíneo.
 
 ![](images/clipboard-2076397047.png){width="387"}
 
-Suponga que se selecciona un individuo al azar de la pobla- ción y que los eventos se definen como A  {tipo A seleccio- nado}, B  {tipo B seleccionado} y C  {grupo étnico 3 seleccionado}.
+Suponga que se selecciona un individuo al azar de la población y que los eventos se definen como A= {tipo A seleccionado}, B ={tipo B seleccionado} y C = {grupo étnico 3 seleccionado}.
 
-1.  Calcule P(A), P(C ) y P(A  C).
+1.  Calcule P(A), P(C ) y P(A y C).
+
+    ```{r}
+    (Probabilidad.A <- 0.106 + 0.141 + 0.2)
+    (Probabilidad.C <- 0.215 + 0.2+0.065+0.02)
+    (Probabilidad.A.y.C <- 0.2 * Probabilidad.C)
+    # ¿Cuál es la probabilidad de B y la Probabildiad de P(A dado B)
+
+    ```
 
 2.  Calcule tanto P(A \| C) y P(C \| A) y explique en contex- to lo que cada una de estas probabilidades representa.
 
