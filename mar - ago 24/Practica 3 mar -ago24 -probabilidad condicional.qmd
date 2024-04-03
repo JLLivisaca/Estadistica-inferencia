@@ -97,3 +97,10 @@ Suponga que las proporciones de fenotipos sanguíneos en una población son las 
 Suponiendo que los fenotipos de dos individuos seleccionados al azar son independientes uno de otro,
 
 ¿cuál es la probabilidad de que ambos fenotipos sean O?
+
+```{r}
+(Probabilida.dos.fenotipos.sean.O <- 0.44 * 0.44)
+
+```
+
+¿Cuál es la probabilidad de que los fenotipos de dos individuos seleccionados al azar coincidan?
