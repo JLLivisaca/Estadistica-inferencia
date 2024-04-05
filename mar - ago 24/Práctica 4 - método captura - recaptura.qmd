@@ -7,7 +7,7 @@ editor: visual
 
 ## Método captura - recaptura
 
-El método de captura-recaptura es una técnica utilizada en estadística para estimar el tamaño de una población o el número de elementos en una población que comparten ciertas características, cuando no es posible contar todos los elementos de manera directa.
+El método de captura-recaptura es una técnica utilizada en estadística para estimar el tamaño de una población o el número de elementos en una población que comparten ciertas características, cuando no es posible contar todos los elementos de manera directa. Empezamos
 
 Este método se utiliza principalmente en biología y ecología para estimar el tamaño de poblaciones de animales, plantas o insectos en un área determinada. Sin embargo, también se puede aplicar en otros campos, como la epidemiología, para estimar el tamaño de una población de personas con ciertas características o enfermedades. Ahora **¿cómo podríamos aplciar en Ingeniería Industrial?**
 
