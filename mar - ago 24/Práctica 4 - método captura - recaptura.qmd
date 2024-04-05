@@ -1,0 +1,96 @@
+---
+title: "Práctica 4"
+author: "JCLL"
+format: docx
+editor: visual
+---
+
+## Método captura - recaptura
+
+El método de captura-recaptura es una técnica utilizada en estadística para estimar el tamaño de una población o el número de elementos en una población que comparten ciertas características, cuando no es posible contar todos los elementos de manera directa.
+
+Este método se utiliza principalmente en biología y ecología para estimar el tamaño de poblaciones de animales, plantas o insectos en un área determinada. Sin embargo, también se puede aplicar en otros campos, como la epidemiología, para estimar el tamaño de una población de personas con ciertas características o enfermedades. Ahora **¿cómo podríamos aplciar en Ingeniería Industrial?**
+
+El método de captura-recaptura se basa en el principio de que, si se captura y marca una muestra de la población, y luego se vuelve a capturar una segunda muestra en un momento posterior, la proporción de individuos marcados en la segunda muestra proporciona una estimación del tamaño total de la población.
+
+El procedimiento típico del método de captura-recaptura implica los siguientes pasos:
+
+1.  Captura inicial: Se captura una muestra de la población y se marca o identifica de alguna manera a los individuos capturados sin dañarlos o alterar su comportamiento.
+
+2.  Recaptura: Después de un período de tiempo determinado, se vuelve a capturar una segunda muestra de la población. En esta segunda captura, se registra el número de individuos marcados y no marcados.
+
+3.  Estimación: Utilizando los datos de las dos muestras (captura inicial y recaptura), se estima el tamaño total de la población utilizando métodos estadísticos específicos, como el método de Petersen, Chapman, Schumacher-Eschmeyer, entre otros.
+
+Es importante tener en cuenta que el método de captura-recaptura asume ciertas condiciones para proporcionar estimaciones precisas, como la marca no altere el comportamiento de los individuos, la población sea cerrada durante el período de estudio y que la probabilidad de captura sea constante para todos los individuos. Además, es crucial que las muestras sean representativas de la población en cuestión.
+
+## Ejemplo 1
+
+Supongamos que capturamos una muestra de peces en un lago, marcamos a algunos de ellos y luego los liberamos de nuevo en el lago. Después de un tiempo, capturamos otra muestra y registramos cuántos de los peces recapturados están marcados. Utilizaremos esta información para estimar el tamaño total de la población de peces en el lago. Aquí está el código en R para realizar este cálculo:
+
+```{r}
+# Número de peces capturados inicialmente
+captura1 <- 50
+
+# Número de peces capturados en la recaptura
+captura2 <- 40
+
+# Número de peces marcados en la primera captura
+marcados_captura1 <- 10
+
+# Número de peces recapturados que estaban marcados
+marcados_captura2 <- 5
+
+# Estimación del tamaño total de la población utilizando el método de captura-recaptura
+tamaño_poblacion <- (captura1 * captura2) / marcados_captura2
+
+print(paste("El tamaño estimado de la población es:", tamaño_poblacion))
+
+```
+
+## Ejemplo 2
+
+Supongamos que un recipiente con un grano seco específico. Realiza las siguientes instrucciones:
+
+1.  Ahora capturamos una muestra de 100 gramos de este grano seco y marcamos para distinguirla de color rojo (puede ser cualquier color el objetivo es distinguir el grano de los demás).
+
+2.  Depositamos los 100 gramos de granos secos en un recipiente cerrado y lo agitamos de manera intensa.
+
+3.  Después, sacamos una porción de granos del recipiente, los que quepan en la mano, contamos los granos que hemos sacado. Separa los granos marcados con rojos y los que no. ¿cuántos tienes de cada uno?
+
+4.  Calcula el porcentaje de granos rojos que has obtenido, para esto utiliza: Número granos rojos / Número total de granos en la muestra del paso 3.
+
+5.  Ahora, si consideremos la aleatoriedad de la muestra, y tomamos en cuenta el teorema de la equiprobabilidad podemos mencionar que, Número de granos = 100 gramos de granos rojos / porcentaje de granos rojos en la muestra (punto 4). Entonces, **¿cuántos granos tendríamos? (estimador de lincoln-Petersen).**
+
+6.  Utiliza la siguiente línea de código para hacer tus cálculos:
+
+```{r}
+
+
+
+```
+
+**Nota:** Debemos considerar que este es un método con un grado de error (incertidumbre) que se puede corregir la muestra usando diferentes métodos como
+
+1.  Utiliza otra variante del método de la captura - recaptura para estimar el número de granos en tu recipiente. Para esto, nombra una variable como **Muestra M** que va ser el número de granos que recolectes de tu muestra de granos secos (no importa la cantidad ni el peso solo el número de granos que recolectes). La **Muestra M** representa el total de granos que has obtenido al sacar la muestra. Marca los granos con un color, de forma que se distingan claramente de los demás.
+
+2.  Coloca, la **Muestra M** nuevamente en el recipiente y agita el recipiente de forma intensa de manera que se mezclen todos los granos.
+
+3.  Vuelve a capturar una muestra, lo que quepa en tu mano, le colocarás al número total de granos el nombre de **Muestra N y Muestra O** a la cantidad de granos marcados en tu muestra**.**
+
+4.  Cálcula el número de granos considerando la siguiente fórmula: Total de granos = (Muestra M \* Muestra N) / Muestra O
+
+5.  Realiza los cálculos con en la siguiente línea de código
+
+    ```{r}
+
+    ```
+
+Contesta estas preguntas:
+
+-   ¿qué método te funcionó mejor?
+
+-   ¿hay algún error que pudiste notar en la muestra?
+
+-   ¿influye el número de veces que se realiza el experimento?
+
+-   ¿cuál es la muestra real frente a las muestras calculadas?

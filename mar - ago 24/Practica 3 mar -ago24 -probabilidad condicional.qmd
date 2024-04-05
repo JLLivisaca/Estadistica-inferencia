@@ -86,7 +86,7 @@ Suponga que se selecciona un individuo al azar de la población y que los evento
     (Probabilidad.1.dado.Bcomplemento <- Probabilidad.1.y.Bcomplemento/ (1-0.091))
     ```
 
-## Independencia 
+## Independencia
 
 ### Problema 4
 
