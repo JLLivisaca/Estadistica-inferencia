@@ -43,4 +43,33 @@ Var(Y) = a\^2 (E(x2) - E(x)\* E(x))
 
 Obtener la varianza matemática de la función Y= (ax+b)/2. Suponiendo que la función, es una función probabilística.
 
-## 
+## Variables continuas
+
+### Función de distribución 
+
+f(x) y F(X)
+
+```{r}
+# Grafica de la distribución normal 
+library(Rcmdr)
+library(RcmdrMisc)
+library(readxl)
+par(mfrow = c(1, 2))
+
+local({
+  .x <- seq(-3.291, 3.291, length.out=1000)  
+  plotDistr(.x, pnorm(.x, mean=0, sd=1), cdf=TRUE, xlab="x", 
+  ylab="Cumulative Probability", 
+  main=paste("Normal Distribution:  Mean=0, Standard deviation=1"))
+})
+local({
+  .x <- seq(-3.291, 3.291, length.out=1000)  
+  plotDistr(.x, dnorm(.x, mean=0, sd=1), cdf=FALSE, xlab="x", 
+  ylab="Density", 
+  main=paste("Normal Distribution:  Mean=0, Standard deviation=1"))
+})
+par(mfrow = c(1, 1))
+
+```
+
+### 
