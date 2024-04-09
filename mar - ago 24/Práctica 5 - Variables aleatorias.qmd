@@ -1,0 +1,46 @@
+---
+title: "Práctica 5"
+author: "JCLL"
+format: docx
+editor: visual
+---
+
+## Variables aleatorias
+
+Las variables aleatorias, siguen una distribución de probabilidad. Hay de dos tipos, discretas y continuas.
+
+## Variables discretas
+
+```{r}
+
+(variable_discreta <-  rbinom(100,10,0.03))
+plot(variable_discreta)
+```
+
+## Esperanza matemática
+
+Obtener la esperanza matemática de la función Y= ax+b. Suponiendo que la función, es una función probabilística.
+
+E(Y) = E(ax+b)
+
+E(Y) = E(ax) + E(b)
+
+E(Y) = aE(x) +b
+
+Obtener la esperanza matemática de la función Y= (ax+b)/2. Suponiendo que la función, es una función probabilística.
+
+## Varianza matemática
+
+Obtener la varianza matemática de la función Y= ax+b. Suponiendo que la función, es una función probabilística.
+
+Var(Y) = Var(ax +b)
+
+Var(Y) = Var(ax) + Var (b)
+
+Var (Y) = a^2\ Var(X)\ =^
+
+Var(Y) = a\^2 (E(x2) - E(x)\* E(x))
+
+Obtener la varianza matemática de la función Y= (ax+b)/2. Suponiendo que la función, es una función probabilística.
+
+## 

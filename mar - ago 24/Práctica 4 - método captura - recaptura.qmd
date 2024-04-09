@@ -82,7 +82,10 @@ Supongamos que un recipiente con un grano seco específico. Realiza las siguient
 5.  Realiza los cálculos con en la siguiente línea de código
 
     ```{r}
-
+    Muestra_M = 31
+    Muestra_N = 33
+    Muestra_O = 2
+    (Total_grana = (Muestra_M*Muestra_N)/Muestra_O)
     ```
 
 Contesta estas preguntas:
