@@ -72,4 +72,27 @@ par(mfrow = c(1, 1))
 
 ```
 
-### 
+### Distribución exponencial
+
+Graficar la distrbución exponencial
+
+## Integración de variables continúas
+
+```{r}
+# Define la función exponencial
+f <- function(x) {
+  exp(-x^2 - 3*x + 4)  # Función exponencial e^(-x)
+}
+# Define los límites de integración
+a <- 0  # Límite inferior
+b <- Inf  # Límite superior (en este caso, infinito)
+# Realiza la integración
+resultado <- integrate(f, lower = a, upper = b)
+# Imprime el resultado
+print(resultado)
+
+```
+
+-   ¿la función creada es una función de probabilidad?
+
+-   En caso de que no sea una f(x), qué se requiere para que f(x) sea una función de probabilidad. Crea tu código.
