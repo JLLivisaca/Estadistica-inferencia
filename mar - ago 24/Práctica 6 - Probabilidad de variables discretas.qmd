@@ -1,0 +1,95 @@
+---
+title: "Práctica 6"
+author: "JCLL"
+format: docx
+editor: visual
+---
+
+## Valor esperado y Varianza de variables contiúas
+
+De la función dada, se requiere E(x) y Var(x). Comprobar que la función sea una función de probabilidad.
+
+```{r}
+# Función
+funcion_uno <-  function(x){
+  (x^2 * exp(x-1))/x
+}
+
+x= 1:100
+funcion_uno(x)
+
+(funcion_probabilidad <-  integrate(funcion_uno, 0.1,1.41755))
+
+
+
+```
+
+## Valor esperado
+
+```{r}
+
+# Valor esperado
+
+# Función
+funcion_uno <-  function(x){
+  (x^2 * exp(x-1))/x
+}
+
+x= 1:100
+
+(funcion_probabilidad <-  integrate(funcion_uno, 0.1,1.41755))
+
+valor.esperado <-  function(x){
+  x*(x^2 * exp(x-1))/x
+}
+(funcion_probabilidad.2 <-  integrate(valor.esperado, 0.1,1.41755))
+
+```
+
+## Varianza
+
+```{r}
+# Función
+funcion_dos <-  function(x){
+  (x^2) *(x^2 * exp(x-1))/x
+}
+
+x= 1:100
+
+
+(valor.esperado.x2 <-  integrate(funcion_dos, 0.1,1.41755))
+
+(varianza.x <-  (valor.esperado.x2$value) - (funcion_probabilidad.2$value)^2)
+```
+
+# Distribución discreta Binomial
+
+```{r}
+
+(probabilidad.binomial <- (dbinom(0:10,10,0.05)))
+# Función propia
+funcion.binomial <-  function(n,x,p){
+  choose(n,x)*p^x *(1-p)^(n-x)
+}
+(funcion.binomial(10,0:10,0.05))
+
+# Función acumulada
+b=pbinom(0,10,0.05,lower.tail = T) # P(X<=x)
+a=pbinom(7,10,0.05,lower.tail = T) # P(X<=x)
+(probabilidad.menor.8 <-  a-b)
+
+# Probabilidad P(2 <= X <= 7)
+b=pbinom(1,10,0.05,lower.tail = T) # P(X<=x)
+a=pbinom(7,10,0.05,lower.tail = T) # P(X<=x)
+(probabilidad.menor.8 <-  a-b)
+
+# Ejercicio
+x= c(0:10)
+
+fx = c(0.002, 0.001, 0.002, 0.005, 0.02, 0.04, 0.18, 0.37, 0.25, 0.12, 0.01)
+# P(0 <= X <= 5) = F(b)- F(a-)= F(5) - F(0)
+(Probabilidad.0.y.5 = sum(0.002, 0.001,0.002, 0.005,0.02) - 0.002)
+(Probilidad.menor.7 = sum(0.002, 0.001, 0.002, 0.005, 0.02, 0.04, 0.18))
+
+# P(X>=7)
+```
