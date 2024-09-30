@@ -62,4 +62,40 @@ La probabilidad de que el número que desea ejemplares nuevos esté a más de do
 
 ## Distribución hipergeométrica
 
-Un tipo de cámara digital viene en una versión de 3 megapi- xeles o una versión de 4 megapixeles. Una tienda de cáma- ras recibió un envío de 15 de estas cámaras, de las cuales 6 tienen una resolución de 3 megapixeles. Suponga que se seleccionan al azar 5 de estas cámaras para guardarlas detrás del mostrador; las otras 10 se colocan en una bodega. Sea X  el número de cámaras de 3 megapixeles entre las 5 seleccionadas para guardarlas detrás del mostrador. a. ¿Qué distribución tiene X (nombre y valores de todos los parámetros)? b. Calcule P(X  2), P(X  2) y P(X 2). c. Calcule el valor medio y la desviación estándar de X.
+Un tipo de cámara digital viene en una versión de 3 megapixeles o una versión de 4 megapixeles. Una tienda de cámaras recibió un envío de 15 de estas cámaras, de las cuales 6 tienen una resolución de 3 megapixeles. Suponga que se seleccionan al azar 5 de estas cámaras para guardarlas detrás del mostrador; las otras 10 se colocan en una bodega. Sea X = el número de cámaras de 3 megapixeles entre las 5 seleccionadas para guardarlas detrás del mostrador.
+
+-   a\. ¿Qué distribución tiene X (nombre y valores de todos los parámetros)?
+
+-   b\. Calcule P(X = 2), P(X \<= 2) y P(X \>= 2).
+
+-   c\. Calcule el valor medio y la desviación estándar de X.
+
+a) La distribución de X, es una distribución hipergeométrica. Los nombres son:
+
+N = Cantidad de elementos del conjunto que se toma la muestra, son todas las cámaras tanto de 3 como de 4 megapixeles.
+
+K = cantidad de elementos existentes que se consideran como éxitos. En este caso, es el número de cámaras de 3 megapixeles.
+
+n = tamaño de la muestra. En este caso es la selección al azar 5 cámaras
+
+X = el número de cámaras de 3 megapixeles entre las 5 seleccionadas para guardarlas detrás del mostrador.
+
+```{r}
+#N = Cantidad de elementos del conjunto que se toma la muestra, son todas las cámaras tanto de 3 como de 4 megapixeles. 
+
+#K = cantidad de elementos existentes que se consideran como éxitos. En este caso, es el número de cámaras de 3 megapixeles. 
+
+# n = tamaño de la muestra. En este caso es la selección al azar 5 cámaras
+
+# X = el número de cámaras de 3 megapixeles entre las 5 seleccionadas para guardarlas detrás del mostrador.
+
+funcion.hipergeomtrica.juan <-  function(N,K,n,x){
+  (choose(K,x)*choose(N-K,n-x))/ (choose(N,n))
+}
+(funcion.hipergeomtrica.juan(15,6,5,0:5))
+
+dhyper(0:5,6,9,5) # función de distribución 
+
+
+
+```
