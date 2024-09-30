@@ -35,3 +35,27 @@ q = 1-p
 ```
 
 El valor medio y la desviación estándar del número que desea un ejemplar nuevo del libro, son 7.5 y 2.291288 respectivamente.
+
+```{r}
+#b. ¿Cuál es la probabilidad de que el número que desea ejemplares nuevos esté a más de dos desviaciones estándar del valor medio?
+
+# Qué vaores están más de 2 desviación estándar
+# miu + 2sigma = 7.5 + 2* 2.291288 = 12.08258. Se toma valor 12
+# miu - 2sigma =  7.5 - 2* 2.291288 = 2.917424. Se toma valor 3
+# Para dos números cualesquiera a y b con a  b. 
+# P(a  X  b)  F(b)  F(a-)
+# donde “a” representa el valor posible de X más grande que es estrictamente menor
+#que a. En particular, si los únicos valores posibles son enteros y si a y b son #enteros, entonces
+# a = 3
+# b = 12 y
+# a- = a -1 = 2
+# P( 3<= X <= 12) = P(b) - P(a-) = P(X= 12) - P(X=2)
+
+dbinom(x=3,size = 25, 0.3 ) # valor puntal de la probabilidad, que es la función de distribución de probabilidades
+(Probabilida.b = pbinom(12,25,0.3)) #0.9825303
+(Probbiidad.amenos = pbinom(2,25,0.3)) #0.008960528
+(Probabilida.b - Probbiidad.amenos) # 0.9735697
+
+```
+
+La probabilidad de que el número que desea ejemplares nuevos esté a más de dos desviaciones estándar del valor medio, es de 0.9735697.
