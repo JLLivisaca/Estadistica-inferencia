@@ -1,0 +1,37 @@
+---
+title: "Práctica 2"
+author: "Juan Llivisaca"
+date: "2024-09-30"
+output: word_document
+---
+
+# Distribución Discretas
+
+## Distribución Binomial
+
+Suponga que 30% de todos los estudiantes que tienen que comprar un texto para un curso particular desean un ejemplar nuevo (¡los exitosos!), mientras que el otro 70% desea comprar un ejemplar usado. Considere seleccionar 25 compradores al azar.
+
+-   a\. ¿Cuáles son el valor medio y la desviación estándar del número que desea un ejemplar nuevo del libro?
+
+-   b\. ¿Cuál es la probabilidad de que el número que desea ejemplares nuevos esté a más de dos desviaciones estándar del valor medio?
+
+```{r}
+# Binomial 
+# Experimento estadístico: Comprar un ejemplar de un texto para un curso particular.
+# Evento = A = si el texto comprado es nuevo 
+# Evento = B = si el texto comprado es usado 
+# p = éxito, ejemplar de texto nuevo = 0.3
+# q = fracaso, ejemplar de texto usado = 0.7
+# n = 25 compradores elegidos al azar
+
+# a. ¿Cuáles son el valor medio y la desviación estándar del número que desea un ejemplar nuevo del libro? 
+# Valor medio 
+n = 25
+p = 0.3
+(valor.medio <- n*p)# 7.5
+# Desviación estándar
+q = 1-p
+(desviacion.estandar.ejemplo <- sqrt(n*p*q) ) #2.291288
+```
+
+El valor medio y la desviación estándar del número que desea un ejemplar nuevo del libro, son 7.5 y 2.291288 respectivamente.
