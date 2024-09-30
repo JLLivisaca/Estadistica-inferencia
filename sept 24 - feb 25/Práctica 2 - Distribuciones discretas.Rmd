@@ -59,3 +59,7 @@ dbinom(x=3,size = 25, 0.3 ) # valor puntal de la probabilidad, que es la funció
 ```
 
 La probabilidad de que el número que desea ejemplares nuevos esté a más de dos desviaciones estándar del valor medio, es de 0.9735697.
+
+## Distribución hipergeométrica
+
+Un tipo de cámara digital viene en una versión de 3 megapi- xeles o una versión de 4 megapixeles. Una tienda de cáma- ras recibió un envío de 15 de estas cámaras, de las cuales 6 tienen una resolución de 3 megapixeles. Suponga que se seleccionan al azar 5 de estas cámaras para guardarlas detrás del mostrador; las otras 10 se colocan en una bodega. Sea X  el número de cámaras de 3 megapixeles entre las 5 seleccionadas para guardarlas detrás del mostrador. a. ¿Qué distribución tiene X (nombre y valores de todos los parámetros)? b. Calcule P(X  2), P(X  2) y P(X 2). c. Calcule el valor medio y la desviación estándar de X.
