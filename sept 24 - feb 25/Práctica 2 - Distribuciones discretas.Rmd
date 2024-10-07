@@ -70,7 +70,7 @@ Un tipo de cámara digital viene en una versión de 3 megapixeles o una versión
 
 -   c\. Calcule el valor medio y la desviación estándar de X.
 
-a) La distribución de X, es una distribución hipergeométrica. Los nombres son:
+a)  La distribución de X, es una distribución hipergeométrica. Los nombres son:
 
 N = Cantidad de elementos del conjunto que se toma la muestra, son todas las cámaras tanto de 3 como de 4 megapixeles.
 
@@ -99,3 +99,25 @@ dhyper(0:5,6,9,5) # función de distribución
 
 
 ```
+
+Los valores puntules de la distribución son:
+
+```         
+P(x= 0)= 0.041958042, P(x= 1)=  0.251748252, P(x= 2)=  0.419580420, P(x= 3)=  0.239760240, P(x= 4)=  0.044955045, P(x= 5)=  0.001998002
+```
+
+-   b\. Calcule P(X = 2), P(X \<= 2) y P(X \>= 2).
+
+```{r}
+#P(X = 2),
+(funcion.hipergeomtrica.juan(15,6,5,2)) #0.4195804
+
+# P(X <= 2)
+(cumsum(funcion.hipergeomtrica.juan(15,6,5,0:2))) #0.71328671
+
+# P(X >= 2). 
+
+1- (acumulado = (cumsum(funcion.hipergeomtrica.juan(15,6,5,0:1)))) #0.7062937 
+```
+
+Para la P(X = 2) = 0.4195804, Para P(X \<= 2) = #0.71328671 y para P(X \>= 2) = 0.7062937
